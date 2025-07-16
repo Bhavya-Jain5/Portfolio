@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bhavya Jain – Unity Game Developer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #23243a 0%, #22263c 70%, #22364f 100%);
+      color: #e3e9f3;
+      min-height: 100vh;
+    }
+    header {
+      text-align: center;
+      padding: 4rem 1rem 2.2rem 1rem;
+      background: linear-gradient(135deg, #273c75 50%, #19243b 100%);
+      box-shadow: 0 2px 12px 0 rgba(16,30,40,0.07);
+    }
+    .avatar {
+      width: 98px;
+      height: 98px;
+      border-radius: 50%;
+      margin: 0 auto 1.2rem auto;
+      display: block;
+      border: 3px solid #30cfff;
+      object-fit: cover;
+      background: #1a223b;
+    }
+    h1 {
+      margin: 0 0 0.3rem 0;
+      font-size: 2.7rem;
+      letter-spacing: -2px;
+      font-weight: 600;
+      color: #fff;
+    }
+    .hero-tags {
+      font-size: 1.1rem;
+      margin-bottom: 1.1rem;
+      color: #68e7fc;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+    .hero-blurb {
+      font-size: 1.22rem;
+      color: #e3e9f3;
+      max-width: 540px;
+      margin: 1.1rem auto 0.8rem auto;
+      line-height: 1.6;
+      font-weight: 400;
+      text-shadow: 0 2px 8px #0c1822a4;
+    }
+    .available {
+      background: #68e7fc;
+      color: #17212b;
+      display: inline-block;
+      padding: 0.35em 1.2em;
+      font-weight: bold;
+      border-radius: 30px;
+      font-size: 1.09rem;
+      margin: 1.3rem auto 0 auto;
+      letter-spacing: 0.02em;
+    }
+    .container {
+      max-width: 1160px;
+      margin: 2.5rem auto 2rem auto;
+      padding: 0 1rem;
+    }
+    h2.section-title {
+      font-size: 2rem;
+      color: #30cfff;
+      margin-bottom: 2.4rem;
+      font-weight: 600;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-left: 0.2rem;
+      text-shadow: 0 2px 12px #0c182236;
+    }
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.3rem;
+      margin-bottom: 3rem;
+    }
+    .card {
+      background: #27334d;
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(36,70,100,0.13);
+      padding: 1.5rem 1.2rem 1.1rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.13s, box-shadow 0.13s;
+      min-width: 0;
+      border: 1px solid #303d57;
+    }
+    .card:hover {
+      transform: translateY(-6px) scale(1.025);
+      box-shadow: 0 16px 36px rgba(70,230,250,0.10), 0 2px 16px #0e212a30;
+      border-color: #30cfff;
+    }
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 0.6rem;
+      font-size: 1.19rem;
+      color: #fff;
+      letter-spacing: 0.01em;
+    }
+    .tags {
+      margin-bottom: 0.6rem;
+    }
+    .tag {
+      display: inline-block;
+      background: #30cfff;
+      color: #17363e;
+      font-size: 0.82rem;
+      padding: 0.16rem 0.68rem;
+      border-radius: 3px;
+      margin-right: 0.4rem;
+      margin-bottom: 0.22rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+    .card ul {
+      margin-top: 0;
+      margin-bottom: 0.85rem;
+      padding-left: 1.2rem;
+      font-size: 0.97rem;
+      color: #e3e8ed;
+    }
+    .card p {
+      font-size: 0.98rem;
+      color: #bbdeea;
+      margin-top: 0;
+    }
+    .card video, .card .yt-embed {
+      width: 100%;
+      border-radius: 9px;
+      background: #162330;
+      margin-top: 0.8rem;
+      margin-bottom: 0.25rem;
+      box-shadow: 0 4px 20px #1e293b50;
+      aspect-ratio: 16 / 9;
+      height: auto;
+      min-height: 220px;
+    }
+    .card .yt-embed { padding: 0; margin: 0.8rem 0 0.25rem 0; border: none; }
+    @media (max-width: 1200px) {
+      .project-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 800px) {
+      .project-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+      .container { padding: 0 0.2rem; }
+      .card { padding: 1rem 0.6rem 1rem 0.7rem; }
+    }
+    footer {
+      text-align: center;
+      padding: 2.3rem 0 1.4rem 0;
+      background: linear-gradient(90deg, #161A30 60%, #22364f 100%);
+      color: #7de2fc;
+      font-size: 1.09rem;
+      letter-spacing: 0.01em;
+      box-shadow: 0 -3px 24px #1e263b 30%;
+    }
+    .footer-links {
+      margin-top: 0.3rem;
+    }
+    .footer-links a {
+      color: #30cfff;
+      margin: 0 1.12rem;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.08rem;
+    }
+    .footer-links a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <img class="avatar" src="myphoto.jpg" alt="Bhavya Jain photo" />
+    <h1>Bhavya Jain</h1>
+    <div class="hero-tags">Unity Developer | Multiplayer • Puzzle • UGC • Prototyping</div>
+    <div class="hero-blurb">
+      Hi! I'm Bhavya — a Unity game developer with 2+ years’ experience building and shipping games for studios and jams.<br>
+      From modular puzzle systems and level editors to real-time multiplayer, I turn creative ideas into polished, scalable, shippable games.
+    </div>
+    <div class="available">Available for freelance Unity projects – remote, contract, or small teams.</div>
+  </header>
+  <div class="container">
+    <h2 class="section-title">Selected Projects</h2>
+    <div class="project-grid">
+
+      <!-- PlugMatch -->
+      <div class="card">
+        <h3>PlugMatch</h3>
+        <div class="tags">
+          <span class="tag">Puzzle</span>
+          <span class="tag">Professional</span>
+          <span class="tag">Unity</span>
+        </div>
+        <ul>
+          <li>Full rope-based puzzle game, shipped for studio</li>
+          <li>ScriptableObject level data, modular/expandable system</li>
+          <li>Designed and implemented all gameplay, UI, & VFX</li>
+        </ul>
+        <p>Constraint-based grid puzzler: Move plugs along ropes to match colored sockets. Fully data-driven, designer-ready.</p>
+        <video controls>
+          <source src="videos/PlugMatch.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- SodaPack (YouTube) -->
+      <div class="card">
+        <h3>Soda Pack</h3>
+        <div class="tags">
+          <span class="tag">Grid Puzzle</span>
+          <span class="tag">Professional</span>
+          <span class="tag">Unity</span>
+        </div>
+        <ul>
+          <li>Professional project: Built core logic for studio release</li>
+          <li>Modular block spawn, designer-defined level flow</li>
+          <li>All game UI, animations, grid updates</li>
+        </ul>
+        <p>Place multicolored blocks to clear cans on a conveyor. Custom content setup, smooth interaction, scaling difficulty.</p>
+        <iframe class="yt-embed" src="https://www.youtube.com/embed/5oF89q_xxnM" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <!-- RunnerEditor -->
+      <div class="card">
+        <h3>Runner with Level Editor</h3>
+        <div class="tags">
+          <span class="tag">UGC</span>
+          <span class="tag">Prototype</span>
+          <span class="tag">Unity + Firebase</span>
+        </div>
+        <ul>
+          <li>Designed/built custom in-game level editor</li>
+          <li>Realtime level upload/download via Firebase</li>
+          <li>Full runner mechanics, drag-drop controls</li>
+        </ul>
+        <p>Build and share obstacle courses. Players create, upload, and play each other's levels—true UGC in Unity.</p>
+        <video controls>
+          <source src="videos/RunnerEditor.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- Blackjack -->
+      <div class="card">
+        <h3>Blackjack Multiplayer System</h3>
+        <div class="tags">
+          <span class="tag">Multiplayer</span>
+          <span class="tag">Netcode</span>
+          <span class="tag">Unity</span>
+        </div>
+        <ul>
+          <li>Online Blackjack using Unity Netcode</li>
+          <li>Dedicated or P2P hosting: 100+ games/server</li>
+          <li>ServerManager: logic & sync, ClientManager: UI/UX</li>
+        </ul>
+        <p>Fully networked blackjack supporting dedicated servers or player-hosted games. Authority + sync from scratch.</p>
+        <video controls>
+          <source src="videos/Blackjack.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- Thieves Destiny (YouTube) -->
+      <div class="card">
+        <h3>Thieves Destiny</h3>
+        <div class="tags">
+          <span class="tag">Game Jam Winner</span>
+          <span class="tag">Team</span>
+          <span class="tag">Unity</span>
+        </div>
+        <ul>
+          <li>Game jam winner – 1 week, team of 5</li>
+          <li>Developed player logic, block interactions, UI</li>
+          <li>Unique sky-path puzzle with limited placement</li>
+        </ul>
+        <p>Guide a stunt-thief by building a path in the sky with jump pads, elevators, and tiles—win by smart placement.</p>
+        <iframe class="yt-embed" src="https://www.youtube.com/embed/p4aDTPQrNRA" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <!-- Tentaizu -->
+      <div class="card">
+        <h3>Tentaizu</h3>
+        <div class="tags">
+          <span class="tag">Logic Puzzle</span>
+          <span class="tag">Solo</span>
+          <span class="tag">Unity</span>
+        </div>
+        <ul>
+          <li>Custom implementation of 7x7 “hidden star” puzzle</li>
+          <li>Number clues, unique solution logic</li>
+          <li>All UI, gameplay loop, and win detection</li>
+        </ul>
+        <p>Inspired by Japanese celestial map puzzles. Find all 10 hidden stars using grid-based deduction and logic clues.</p>
+        <video controls>
+          <source src="videos/Tentaizu.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- SolitaireJam -->
+      <div class="card">
+        <h3>Solitaire Jam</h3>
+        <div class="tags">
+          <span class="tag">Card Puzzle</span>
+          <span class="tag">Professional</span>
+          <span class="tag">Unity</span>
+        </div>
+        <ul>
+          <li>Custom level system via ScriptableObjects</li>
+          <li>Mobile-friendly, clean UI and auto-solve logic</li>
+          <li>Highly modular, built for expansion</li>
+        </ul>
+        <p>Puzzle card sorter for mobile, with creative sorting rules and a flexible level system for rapid content iteration.</p>
+        <video controls>
+          <source src="videos/SolitaireJam.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- 15 Chinese Soldiers (YouTube) -->
+      <div class="card">
+        <h3>15 Chinese Soldiers</h3>
+        <div class="tags">
+          <span class="tag">Narrative Action</span>
+          <span class="tag">Game Jam</span>
+          <span class="tag">Unity</span>
+        </div>
+        <ul>
+          <li>Team project (2 weeks, college jam)</li>
+          <li>Gameplay programming, player logic, AI dialog system</li>
+          <li>Story-driven, narrative twist on action gameplay</li>
+        </ul>
+        <p>Survive a trippy drug-fueled zombie apocalypse… or is it? A jam game blending reality, hallucination, and AI-driven story.</p>
+        <iframe class="yt-embed" src="https://www.youtube.com/embed/XhwYlf5VZlM" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <!-- FallingBlock -->
+      <div class="card">
+        <h3>Falling Block</h3>
+        <div class="tags">
+          <span class="tag">Endless Runner</span>
+          <span class="tag">Solo</span>
+          <span class="tag">Unity</span>
+        </div>
+        <ul>
+          <li>Optimized block dropper, inspired by community tutorials</li>
+          <li>Shop system, unlockable space/asteroid themes</li>
+          <li>Procedural spawn, scaling speed and challenge</li>
+        </ul>
+        <p>Dodge falling blocks, collect coins, and unlock new looks. Simple, addictive, endless runner built from scratch.</p>
+        <video controls>
+          <source src="videos/FallingBlock.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- GrappleUp (YouTube Shorts) -->
+      <div class="card">
+        <h3>Grapple Up</h3>
+        <div class="tags">
+          <span class="tag">Endless Swinger</span>
+          <span class="tag">Mobile</span>
+          <span class="tag">Unity</span>
+        </div>
+        <ul>
+          <li>Endless “Spiderman” rope-swing runner</li>
+          <li>3500+ downloads on Play Store (college project)</li>
+          <li>Player logic, shop system, game loop/UX</li>
+        </ul>
+        <p>Swing through city skylines, avoid falling, and unlock new characters. Built as a team, published, and got real user feedback!</p>
+        <iframe class="yt-embed" src="https://www.youtube.com/embed/ht_KjSuk9as" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <!-- PakoForeverClone -->
+      <div class="card">
+        <h3>Pako Forever Clone</h3>
+        <div class="tags">
+          <span class="tag">Arcade Clone</span>
+          <span class="tag">Jam</span>
+          <span class="tag">Unity</span>
+        </div>
+        <ul>
+          <li>Remake of hit game Pako Forever (arcade chase)</li>
+          <li>Twist: skateboarder + zombies instead of cars</li>
+          <li>All gameplay, enemy, and movement logic</li>
+        </ul>
+        <p>Chase, dodge, and survive waves of zombies with unique player twists. Fast prototype, inspired by real-world hit.</p>
+        <video controls>
+          <source src="videos/PakoForeverClone.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- SimpleBossFight (YouTube) -->
+      <div class="card">
+        <h3>Simple Boss Fight</h3>
+        <div class="tags">
+          <span class="tag">Boss Battle</span>
+          <span class="tag">Solo</span>
+          <span class="tag">Unity</span>
+        </div>
+        <ul>
+          <li>Solo action prototype: multi-phase boss battle</li>
+          <li>Custom damage, attack patterns, basic AI</li>
+          <li>Color unlocks, minion spawn, simple VFX</li>
+        </ul>
+        <p>Face off against four bosses to restore color to the world. Quick prototype made just for fun and design practice.</p>
+        <iframe class="yt-embed" src="https://www.youtube.com/embed/b9LmpJNrg3o" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <!-- TechnicalArt (YouTube) -->
+      <div class="card">
+        <h3>Technical Art (Internal)</h3>
+        <div class="tags">
+          <span class="tag">Tech Art</span>
+          <span class="tag">Level Design</span>
+          <span class="tag">Unity</span>
+        </div>
+        <ul>
+          <li>Challenge: build a full environment from an asset pack</li>
+          <li>Level design, lighting, mood, and composition</li>
+          <li>Delivered as studio “art test” project</li>
+        </ul>
+        <p>Used limited assets to create a full scene with atmosphere and story. Built for internal technical art challenge.</p>
+        <iframe class="yt-embed" src="https://www.youtube.com/embed/M19DEL_Vht0" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <!-- TowerDefensePrototype -->
+      <div class="card">
+        <h3>Tower Defense Prototype</h3>
+        <div class="tags">
+          <span class="tag">Tower Defense</span>
+          <span class="tag">Idle/Prototype</span>
+          <span class="tag">Unity</span>
+        </div>
+        <ul>
+          <li>Solo prototype: tap-to-kill, upgradeable tower</li>
+          <li>Designed health/damage scaling and wave logic</li>
+          <li>Planned as idle/auto-battler (unfinished)</li>
+        </ul>
+        <p>Defend the core, destroy enemy waves, and upgrade your tower’s abilities. Core gameplay and system all solo coded.</p>
+        <video controls>
+          <source src="videos/TowerDefencePrototype.mp4" type="video/mp4">
+        </video>
+      </div>
+
+    </div>
+  </div>
+  <footer>
+    <div>
+      <b>Available for freelance Unity dev work.</b><br>
+      <div class="footer-links">
+        <a href="mailto:jainbhavya051202@gmail.com">jainbhavya051202@gmail.com</a> &nbsp;|&nbsp;
+        <a href="https://linkedin.com/in/bhavya-j-964ba6190" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
