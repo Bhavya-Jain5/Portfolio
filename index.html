@@ -64,6 +64,7 @@
       letter-spacing: 0.02em;
       text-decoration: none;
       transition: background-color 0.2s, transform 0.2s;
+      cursor: pointer;
     }
     .available:hover {
       background-color: #fff;
@@ -186,6 +187,7 @@
       margin: 0 0.5rem;
       transition: background-color 0.2s, transform 0.2s;
       display: inline-block;
+      cursor: pointer;
     }
     .contact-buttons a:hover {
       background-color: #fff;
@@ -218,7 +220,7 @@
     <div class="hero-blurb">
       Hi, I'm Bhavya. I'm the Unity developer you bring in when you need to ship a polished, professional game. With 2+ years of studio experience, I help teams by building the robust, scalable systems that power great gameplay—from complex puzzle mechanics to real-time multiplayer.
     </div>
-    <a href="mailto:jainbhavya051202@gmail.com" class="available">✅ Available for Freelance Work – Let's Talk!</a>
+    <a onclick="copyEmail(event)" href="mailto:jainbhavya051202@gmail.com" class="available">✅ Available for Freelance Work – Let's Talk!</a>
   </header>
   <div class="container">
     <h2 class="section-title">Selected Projects</h2>
@@ -226,9 +228,7 @@
 
       <div class="card">
         <h3>Blackjack Multiplayer System</h3>
-        <div class="tags">
-          <span class="tag">Multiplayer</span><span class="tag">Netcode</span><span class="tag">Unity</span>
-        </div>
+        <div class="tags"><span class="tag">Multiplayer</span><span class="tag">Netcode</span><span class="tag">Unity</span></div>
         <ul>
           <li>Online Blackjack using Unity Netcode for GameObjects</li>
           <li>Authoritative Server Logic & Client-Side Prediction</li>
@@ -240,9 +240,7 @@
 
       <div class="card">
         <h3>PlugMatch</h3>
-        <div class="tags">
-          <span class="tag">Puzzle</span><span class="tag">Professional</span><span class="tag">Unity</span>
-        </div>
+        <div class="tags"><span class="tag">Puzzle</span><span class="tag">Professional</span><span class="tag">Unity</span></div>
         <ul>
           <li>Full rope-based puzzle game, shipped for a studio</li>
           <li>Data-driven levels using ScriptableObjects</li>
@@ -254,9 +252,7 @@
 
       <div class="card">
         <h3>Runner with Level Editor</h3>
-        <div class="tags">
-          <span class="tag">UGC</span><span class="tag">Prototype</span><span class="tag">Unity + Firebase</span>
-        </div>
+        <div class="tags"><span class="tag">UGC</span><span class="tag">Prototype</span><span class="tag">Unity + Firebase</span></div>
         <ul>
           <li>Custom in-game level editor tool</li>
           <li>Real-time level sharing via Firebase backend</li>
@@ -275,7 +271,7 @@
           <li>All game UI, animations, grid updates</li>
         </ul>
         <p>Place multicolored blocks to clear cans on a conveyor. Custom content setup, smooth interaction, scaling difficulty.</p>
-        <iframe class="yt-embed" src="https://www.youtube.com/embed/5oF89q_xxnM" frameborder="0" allowfullscreen></iframe>
+        <iframe class="yt-embed" src="https://www.youtube.com/embed/your_video_id_here" frameborder="0" allowfullscreen></iframe>
       </div>
       
       <div class="card">
@@ -287,7 +283,7 @@
           <li>Unique sky-path puzzle with limited placement</li>
         </ul>
         <p>Guide a stunt-thief by building a path in the sky with jump pads, elevators, and tiles—win by smart placement.</p>
-        <iframe class="yt-embed" src="https://www.youtube.com/embed/p4aDTPQrNRA" frameborder="0" allowfullscreen></iframe>
+        <iframe class="yt-embed" src="https://www.youtube.com/embed/your_video_id_here" frameborder="0" allowfullscreen></iframe>
       </div>
 
       <div class="card">
@@ -323,7 +319,7 @@
           <li>Story-driven, narrative twist on action gameplay</li>
         </ul>
         <p>Survive a trippy drug-fueled zombie apocalypse… or is it? A jam game blending reality, hallucination, and AI-driven story.</p>
-        <iframe class="yt-embed" src="https://www.youtube.com/embed/XhwYlf5VZlM" frameborder="0" allowfullscreen></iframe>
+        <iframe class="yt-embed" src="https://www.youtube.com/embed/your_video_id_here" frameborder="0" allowfullscreen></iframe>
       </div>
 
       <div class="card">
@@ -347,7 +343,7 @@
           <li>Player logic, shop system, game loop/UX</li>
         </ul>
         <p>Swing through city skylines, avoid falling, and unlock new characters. Built as a team, published, and got real user feedback!</p>
-        <iframe class="yt-embed" src="https://www.youtube.com/embed/ht_KjSuk9as" frameborder="0" allowfullscreen></iframe>
+        <iframe class="yt-embed" src="https://www.youtube.com/embed/your_video_id_here" frameborder="0" allowfullscreen></iframe>
       </div>
 
       <div class="card">
@@ -371,7 +367,7 @@
           <li>Color unlocks, minion spawn, simple VFX</li>
         </ul>
         <p>Face off against four bosses to restore color to the world. Quick prototype made just for fun and design practice.</p>
-        <iframe class="yt-embed" src="https://www.youtube.com/embed/b9LmpJNrg3o" frameborder="0" allowfullscreen></iframe>
+        <iframe class="yt-embed" src="https://www.youtube.com/embed/your_video_id_here" frameborder="0" allowfullscreen></iframe>
       </div>
       
       <div class="card">
@@ -383,7 +379,7 @@
           <li>Delivered as studio “art test” project</li>
         </ul>
         <p>Used limited assets to create a full scene with atmosphere and story. Built for internal technical art challenge.</p>
-        <iframe class="yt-embed" src="https://www.youtube.com/embed/M19DEL_Vht0" frameborder="0" allowfullscreen></iframe>
+        <iframe class="yt-embed" src="https://www.youtube.com/embed/your_video_id_here" frameborder="0" allowfullscreen></iframe>
       </div>
       
       <div class="card">
@@ -406,11 +402,32 @@
       <h2>Let's Build Something Great</h2>
       <p>I'm currently available for freelance and remote contract work. If you have a project in mind or need a dedicated developer to bring your game to life, let's connect.</p>
       <div class="contact-buttons">
-        <a href="mailto:jainbhavya051202@gmail.com">Email Me</a>
+        <a onclick="copyEmail(event)" href="mailto:jainbhavya051202@gmail.com">Email Me</a>
         <a href="https://linkedin.com/in/bhavya-j-964ba6190" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
       </div>
     </div>
   </section>
+
+  <script>
+    function copyEmail(event) {
+      // Prevent the default mailto link behavior
+      event.preventDefault();
+      
+      const email = 'jainbhavya051202@gmail.com';
+      
+      // Use the modern Navigator Clipboard API
+      navigator.clipboard.writeText(email).then(() => {
+        // Success feedback
+        alert('Email address copied to clipboard: ' + email);
+        
+        // Optionally, you can still try to open the mail client
+        window.location.href = 'mailto:' + email;
+      }, (err) => {
+        // Error feedback
+        alert('Could not copy email. Please manually copy: ' + email);
+      });
+    }
+  </script>
 
 </body>
 </html>
